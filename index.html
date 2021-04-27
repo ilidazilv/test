@@ -31,18 +31,14 @@
         <input placeholder="image link" type="text" id="image_url3"/>
         <button onclick="getImage(document.getElementById('image_url3').value, 'xhrImg3')">Add</button>
     </div>
-    <div class='images'>
-      <img src="" id="xhrImg" class="image"/>
-      <img src="" id="xhrImg2" class="image"/>
-      <img src="" id="xhrImg3" class="image"/>
-    </div>
+    <button onclick="getImages()">Посмотреть результат</button>
 
 
 
 
     <img id="localImg"/>
     <img id='tmp' display='none !important'/>
-    <button onclick="getImages()">Посмотреть результат</button>
+
 </div>
 </body>
 </html>
