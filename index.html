@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="main.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+<div class="alertContainer">
+  <h2>Error</h2>
+  <hr/>
+  <div class='message'>
+      Add 3 images, please!
+  </div>
+  <button class='alertButton' onclick="document.getElementsByClassName('alertContainer')[0].style.display = 'none'">Got it!</button>
+</div>
+<div class="main">
+    <h1>Hi there!</h1>
+    <div>
+        <input placeholder="image link" type="text" id="image_url"/>
+        <button onclick="getImage(document.getElementById('image_url').value, 'xhrImg', 'getImage2')">Add</button>
+    </div>
+    <div id='getImage2' style='display: none'>
+        <input placeholder="image link" type="text" id="image_url2"/>
+        <button onclick="getImage(document.getElementById('image_url2').value, 'xhrImg2', 'getImage3')">Add</button>
+    </div>
+
+    <div id='getImage3' style='display: none'>
+        <input placeholder="image link" type="text" id="image_url3"/>
+        <button onclick="getImage(document.getElementById('image_url3').value, 'xhrImg3')">Add</button>
+    </div>
+    <div class='images'>
+      <img src="" id="xhrImg" class="image"/>
+      <img src="" id="xhrImg2" class="image"/>
+      <img src="" id="xhrImg3" class="image"/>
+    </div>
+
+
+
+
+    <img id="localImg"/>
+    <img id='tmp' display='none !important'/>
+    <button onclick="getImages()">Посмотреть результат</button>
+</div>
+</body>
+</html>
